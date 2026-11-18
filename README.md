@@ -1,6 +1,6 @@
-# Operating Systems Practicals
+# SPPU TE IT 2024 Pattern - Operating Systems Practicals
 
-A repository containing Operating Systems laboratory practical assignments, source code, and writeups.
+A repository containing Operating Systems laboratory practical assignments, source code, solutions, and writeups for SPPU TE IT (2024 pattern).
 
 ## Contents
 
@@ -12,3 +12,4 @@ A repository containing Operating Systems laboratory practical assignments, sour
 - **PR6**: Inter-Process Communication (IPC) using FIFOs (Named Pipes)
 - **PR7**: Inter-Process Communication (IPC) using Pipes (Full-duplex Communication)
 - **PR8**: Disk Scheduling Algorithms (SSTF, SCAN, and C-LOOK)
+- **SPPU_OS_Practicals.pdf**: SPPU OS Practicals manual and question bank
