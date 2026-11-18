@@ -1,0 +1,49 @@
+5. Write-up
+
+
+Aim
+To implement disk scheduling algorithms SSTF, SCAN and C-LOOK considering the initial head movement away from the spindle.
+
+
+Objectives
+1. To understand different disk scheduling algorithms.
+2. To implement SSTF, SCAN and C-LOOK algorithms.
+3. To calculate total head movement.
+4. To compare the performance of different disk scheduling algorithms.
+
+
+Theory
+Disk scheduling is an operating system technique used to decide the order in which disk I/O requests are serviced. Its main purpose is to reduce head movement and improve disk access performance.
+
+1. SSTF (Shortest Seek Time First)
+- Selects the disk request closest to the current head position.
+- Reduces total seek time.
+- May cause starvation for requests that are far away.
+2. SCAN (Elevator Algorithm)
+- The disk head moves in one direction and services requests along the way.
+- It reaches the disk boundary and then reverses direction.
+- It provides better and more uniform service compared to SSTF in many workloads.
+3. C-LOOK (Circular LOOK)
+- The disk head moves in one direction and services all requests in that direction.
+- After reaching the last pending request, it jumps to the first pending request at the opposite end.
+- It does not travel to the physical disk boundary unnecessarily.
+Head Movement Formula:
+
+
+Head Movement = |Current Position - Next Position|
+
+Total Movement = sumisson (add symbol) Individual Head Movements
+
+Algorithm
+1. Start the program.
+2. Accept the number of disk requests.
+3. Read the disk request queue.
+4. Accept the initial head position and total number of cylinders.
+5. Sort the disk requests.
+6. Apply SSTF by selecting the nearest pending request.
+7. Apply SCAN by moving towards higher cylinders, reaching the disk boundary and reversing direction.
+8. Apply C-LOOK by servicing higher requests first and then jumping to the lowest pending request.
+9. Calculate and display the total head movement for each algorithm.
+10. Stop the program.
+Conclusion
+Thus, SSTF, SCAN and C-LOOK disk scheduling algorithms were successfully implemented. The request sequence and total head movement were calculated for each algorithm, helping to understand and compare their working and performance.

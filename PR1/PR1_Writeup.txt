@@ -1,0 +1,68 @@
+Practical 1: Implementation of Address Book
+
+1. Aim
+To implement an Address Book with options to Create, View, Insert, Delete, Modify and Exit.
+
+
+2. Objective
+1. To develop a menu-driven address book application.
+2. To store and manage contact details such as name, phone number and email address.
+3. To perform insertion, deletion and modification of contact records.
+4. To understand basic programming concepts such as arrays, structures, loops and conditional statements.
+
+
+3. Theory
+An Address Book is an application used to store and manage contact information such as names, phone numbers and email addresses.
+
+It provides different operations to maintain contact records efficiently. The user can select the required operation from a menu.
+
+The following operations are performed:
+1. Create: Creates a new address book and adds contact records.
+2. View: Displays all available contact records.
+3. Insert: Adds a new contact record to the address book.
+4. Delete: Searches for a particular contact and removes its record.
+5. Modify: Updates the details of an existing contact.
+6. Exit: Terminates the application.
+
+The application uses a menu-driven approach to perform different operations. Contact records are managed using appropriate data storage and file or memory operations.
+
+
+
+4. Algorithm
+1. Start the program.
+2. Initialize the address book.
+3. Display the menu containing six options.
+4. Accept the user's choice.
+5. Perform the selected operation:
+   - If choice is 1, create the address book.
+   - If choice is 2, display all contact records.
+   - If choice is 3, insert a new contact record.
+   - If choice is 4, search and delete the selected contact.
+   - If choice is 5, search and modify the selected contact.
+   - If choice is 6, terminate the program.
+6. Display an appropriate message after performing the operation.
+7. Repeat the menu until the user selects Exit.
+8. Stop the program.
+
+
+
+5. Flowchart
+
+START
+  |
+Initialize Address Book
+  |
+Display Menu
+  |
+Accept User Choice
+  |
+Perform Selected Operation
+  |
+Display Result
+  |
+Choice = Exit?
+
+
+
+6. Conclusion
+Thus, the Address Book application was successfully implemented. It provides options to create, view, insert, delete and modify contact records through a menu-driven approach. It helps in understanding basic programming concepts and record management operations.

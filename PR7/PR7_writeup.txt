@@ -1,0 +1,63 @@
+Practical 7: Interprocess Communication using Pipes
+
+
+
+1. Aim
+To implement full-duplex communication between parent and child processes using pipes.
+
+
+2. Objectives
+1. To understand interprocess communication using ordinary pipes.
+2. To create parent and child processes.
+3. To transfer a filename from the parent process to the child process.
+4. To read the contents of a file in the child process.
+5. To send the file contents back to the parent process and display them.
+
+
+3. Theory
+Pipes are a mechanism of interprocess communication (IPC) used to exchange data between processes. They allow one process to send data and another process to receive it.
+
+In this practical, two pipes are used to achieve full-duplex communication between a parent and child process.
+
+
+
+Working:
+1. Parent Process: Accepts the pathname of a file from the user and sends it to the child process through the first pipe.
+2. Child Process: Receives the filename, opens the file and reads its contents.
+3. Second Pipe: The child process sends the file contents back to the parent process.
+4. Parent Process: Receives the contents and displays them on standard output.
+Diagram:
+        PARENT PROCESS
+       (Accepts Filename)
+              |
+              | Pipe 1
+              v
+        CHILD PROCESS
+       (Reads File Contents)
+              |
+              | Pipe 2
+              v
+        PARENT PROCESS
+       (Displays Contents)
+
+
+Full-duplex communication: It allows data to flow in both directions between two processes. In this practical, two separate pipes are used for communication in both directions.
+
+
+
+4. Algorithm
+1. Start the program.
+2. Create two pipes using the pipe() system call.
+3. Create a child process using fork().
+4. The parent process accepts the pathname of a file.
+5. Send the filename to the child process through the first pipe.
+6. The child process receives the filename and opens the file.
+7. Read the contents of the file.
+8. Send the file contents to the parent process through the second pipe.
+9. The parent process receives the contents and displays them on standard output.
+10. Close the pipes and terminate the processes.
+
+
+
+5. Conclusion
+Thus, full-duplex communication between parent and child processes was successfully implemented using two pipes. The parent process sent the filename to the child process, and the child process read the file contents and sent them back to the parent process for display.

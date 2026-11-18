@@ -1,0 +1,56 @@
+Practical 3: Thread Synchronization (CO3)
+
+
+1. Aim
+To implement thread synchronization using counting semaphores and mutual exclusion using mutex by demonstrating the Producer-Consumer problem.
+
+
+2. Objective
+- To understand thread synchronization.
+- To implement counting semaphores.
+- To understand mutual exclusion using mutex.
+- To demonstrate the Producer-Consumer problem using a shared buffer.
+
+
+3. Theory
+Thread Synchronization:
+
+Thread synchronization is a mechanism used to coordinate multiple threads while accessing shared resources. It prevents conflicts and maintains data consistency.
+
+Counting Semaphore:
+A counting semaphore is used to manage access to shared resources. It maintains a count of available resources.
+
+In the Producer-Consumer problem:
+- empty represents the number of empty buffer slots.
+- full represents the number of filled buffer slots.
+
+Mutex:
+A mutex (Mutual Exclusion) is a locking mechanism that allows only one thread at a time to access a shared resource.
+
+Producer-Consumer Problem:
+
+The Producer-Consumer problem is a synchronization problem in which the producer generates products and stores them in a shared buffer, while the consumer retrieves those products from the buffer.
+
+The producer waits when the buffer is full, and the consumer waits when the buffer is empty.
+
+
+
+4. Algorithm
+1. Start the program.
+2. Initialize the shared buffer.
+3. Initialize counting semaphores empty and full.
+4. Initialize the mutex lock.
+5. Create producer and consumer threads.
+6. The producer checks for an empty buffer slot.
+7. The producer locks the mutex and inserts a product into the buffer.
+8. The producer unlocks the mutex and signals the full semaphore.
+9. The consumer checks whether a product is available.
+10. The consumer locks the mutex and removes a product from the buffer.
+11. The consumer unlocks the mutex and signals the empty semaphore.
+12. Repeat the process continuously.
+13. Stop the program manually.
+
+
+
+5. Conclusion
+Thus, thread synchronization using counting semaphores and mutex was successfully implemented by demonstrating the continuous Producer-Consumer problem. The program ensures proper synchronization between producer and consumer threads and prevents simultaneous access to the shared buffer.

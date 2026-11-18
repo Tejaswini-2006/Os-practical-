@@ -1,0 +1,79 @@
+Practical 2: Process Management (CO2)
+
+
+1. Aim
+To demonstrate process control system calls such as fork() and wait() along with Zombie and Orphan process states using C programs.
+
+
+2. Objectives
+1. To understand process creation using the fork() system call.
+2. To understand process synchronization using the wait() system call.
+3. To perform sorting operations using parent and child processes.
+4. To understand the concept of Zombie processes.
+5. To understand the concept of Orphan processes.
+
+
+
+3. Theory
+Process Management is an important function of an operating system that deals with the creation, execution and termination of processes.
+
+1. fork() System Call
+- The fork() system call creates a new process called the child process.
+- The existing process is called the parent process.
+- Both processes execute independently after creation.
+- It returns 0 to the child process and the child's PID to the parent process.
+
+
+2. wait() System Call
+- The wait() system call is used by the parent process to wait for the termination of its child process.
+- It collects the child's exit status.
+- It helps in process synchronization and prevents zombie processes from remaining unreaped.
+
+
+3. Zombie Process
+- A Zombie process is a process that has completed execution but whose exit status has not yet been collected by its parent.
+- It remains in the process table until the parent calls wait() or terminates.
+
+
+4. Orphan Process
+- An Orphan process is a child process whose parent terminates before the child completes execution.
+- The operating system adopts the orphan process through init or another designated system process.
+- The child continues its execution independently.
+
+
+4. Algorithm
+
+A. FORK and WAIT with Sorting
+1. Start the program.
+2. Accept integers from the user.
+3. Create a child process using fork().
+4. The parent process sorts integers in ascending order.
+5. The child process sorts integers in descending order.
+6. The parent uses wait() to wait for the child process.
+7. Display the sorted results.
+8. Stop the program.
+
+
+B. Zombie Process
+1. Start the program.
+2. Create a child process using fork().
+3. The child process completes its execution.
+4. The parent process sleeps without immediately calling wait().
+5. The completed child remains in the Zombie state.
+6. Observe the Zombie process using the ps command.
+7. The parent calls wait() and collects the child's exit status.
+8. Stop the program.
+
+
+C. Orphan Process
+1. Start the program.
+2. Create a child process using fork().
+3. The parent process terminates.
+4. The child process continues its execution.
+5. The operating system adopts the child process.
+6. Display the child PID and its new parent PID.
+7. The child completes its execution.
+
+
+5. Conclusion
+Thus, process management concepts were successfully implemented using C programs. The fork() and wait() system calls were demonstrated along with sorting operations. Zombie and Orphan process states were also demonstrated and their working was understood.

@@ -1,0 +1,63 @@
+Practical 4: Thread Synchronization and Deadlock Handling
+
+1. Aim
+To implement a deadlock-free solution to the Dining Philosophers problem using semaphores and mutex to demonstrate thread synchronization and deadlock avoidance.
+
+
+2. Objectives
+1. To understand the concept of deadlock.
+2. To study thread synchronization using semaphores.
+3. To implement mutual exclusion using mutex.
+4. To understand resource sharing among multiple threads.
+5. To prevent deadlock in the Dining Philosophers problem.
+
+
+3. Theory
+Dining Philosophers Problem:
+
+The Dining Philosophers problem is a classical synchronization problem in which five philosophers sit around a circular table with five forks.
+
+Each philosopher performs two activities:
+- Thinking
+- Eating
+To eat, each philosopher requires two forks, one on the left and one on the right.
+
+Deadlock:
+
+Deadlock is a situation in which two or more processes wait indefinitely for resources held by each other.
+
+Semaphore:
+
+A semaphore is a synchronization mechanism used to control access to shared resources. In this program, a counting semaphore allows only four philosophers to compete for forks simultaneously.
+
+Mutex:
+
+A mutex is a locking mechanism that ensures only one thread can access a particular resource at a time.
+
+Deadlock Prevention:
+
+In this program, only four philosophers are allowed to compete for five forks at a time. This breaks the circular-wait condition and prevents deadlock.
+
+
+
+
+4. Algorithm
+1. Start the program.
+2. Initialize five mutex locks representing five forks.
+3. Initialize a counting semaphore with a value of four.
+4. Create five philosopher threads.
+5. Each philosopher starts thinking.
+6. The philosopher waits for permission using the semaphore.
+7. Lock the left fork using mutex.
+8. Lock the right fork using mutex.
+9. Start eating.
+10. Release both forks after eating.
+11. Release the semaphore.
+12. Repeat the process three times for each philosopher.
+13. Destroy the mutex locks and semaphore.
+14. Stop the program.
+
+
+
+5. Conclusion
+Thus, the Dining Philosophers problem was successfully implemented using threads, counting semaphores and mutex locks. The program demonstrates synchronization among multiple threads and prevents deadlock by allowing only four philosophers to compete for five forks simultaneously.

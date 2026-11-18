@@ -1,0 +1,68 @@
+Practical 6: Interprocess Communication using FIFOs
+
+
+1. Aim
+To implement interprocess communication using FIFOs for full-duplex communication between two independent processes.
+
+
+
+2. Objectives
+1. To understand interprocess communication using named pipes.
+2. To establish communication between two independent processes.
+3. To transfer sentences from one process to another.
+4. To count the number of characters, words and lines.
+5. To send the calculated result back to the first process.
+
+
+
+3. Theory
+FIFO (First In First Out) is a type of named pipe used for communication between two independent processes. It allows data to be transferred in the order in which it is written.
+
+Unlike ordinary pipes, FIFOs have a name in the file system and can be accessed by independent processes.
+
+Working:
+- Process 1: Accepts sentences from the user and sends them through FIFO 1.
+- Process 2: Receives the sentences and calculates the number of characters, words and lines.
+- Output file: Process 2 stores the calculated result in a file named output.txt.
+- FIFO 2: Sends the result back to Process 1.
+
+
+Diagram:
+       PROCESS 1
+   (Accepts Sentences)
+           |
+           | FIFO 1
+           v
+       PROCESS 2
+ (Counts Characters,
+   Words and Lines)
+           |
+           v
+       output.txt
+           |
+           | FIFO 2
+           v
+       PROCESS 1
+ (Displays the Result)
+
+
+Full-duplex communication: It means communication in both directions. In this practical, FIFO 1 transfers data from Process 1 to Process 2, while FIFO 2 transfers the result back to Process 1.
+
+
+
+4. Algorithm
+1. Start the program.
+2. Create two named pipes, FIFO 1 and FIFO 2, using mkfifo().
+3. Create and execute Process 1 and Process 2 independently.
+4. Process 1 accepts sentences from the user and sends them through FIFO 1.
+5. Process 2 reads the sentences from FIFO 1.
+6. Count the number of characters, words and lines.
+7. Store the calculated results in output.txt.
+8. Send the result back to Process 1 through FIFO 2.
+9. Process 1 receives and displays the result.
+10. Stop the processes.
+
+
+
+5. Conclusion
+Thus, interprocess communication using FIFOs was successfully implemented. Two independent processes communicated in both directions using named pipes. The second process calculated the number of characters, words and lines and returned the result to the first process.

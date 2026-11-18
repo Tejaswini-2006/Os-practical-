@@ -1,0 +1,63 @@
+Practical 5: Deadlock Avoidance using Banker's Algorithm (CO4)
+
+
+1. Aim
+To implement the Banker's Algorithm in C for deadlock avoidance and determine whether the system is in a safe or unsafe state.
+
+2. Objectives
+1. To understand the concept of deadlock avoidance.
+2. To study Banker's Algorithm.
+3. To calculate the Need matrix.
+4. To find the safe sequence of processes.
+5. To determine whether the system is in a safe or unsafe state.
+
+
+3. Theory
+Banker's Algorithm:
+
+Banker's Algorithm is a deadlock avoidance algorithm used by the operating system to allocate resources safely to processes.
+
+It checks whether allocating resources to a process will keep the system in a safe state.
+
+Important Data Structures:
+1. Available: Represents the number of available resources of each type.
+2. Maximum: Represents the maximum resources required by each process.
+3. Allocation: Represents the resources currently allocated to each process.
+4. Need: Represents the remaining resources required by each process.
+Formula:
+
+Need = Maximum − Allocation
+
+Safe State:
+
+A system is in a safe state if there exists at least one sequence in which all processes can complete their execution successfully.
+
+Unsafe State:
+
+A system is in an unsafe state if no safe sequence can be found. It indicates a possibility of deadlock.
+
+
+
+4. Algorithm
+1. Start the program.
+2. Accept the number of processes and resources.
+3. Enter the Allocation Matrix.
+4. Enter the Maximum Matrix.
+5. Enter the Available Resources.
+6. Calculate the Need Matrix using the formula:
+Need = Maximum − Allocation
+7. Initialize all processes as unfinished.
+8. Check whether the Need of a process is less than or equal to Available resources.
+9. If the condition is satisfied, mark the process as finished.
+10. Add its allocated resources back to Available.
+11. Store the process in the safe sequence.
+12. Repeat until all processes are completed or no further process can execute.
+13. If all processes finish, display the safe sequence and SAFE state.
+14. Otherwise, display UNSAFE state.
+15. Stop the program.
+
+
+
+
+5. Conclusion
+Thus, Banker's Algorithm was successfully implemented in C to demonstrate deadlock avoidance. The algorithm calculates the Need Matrix and checks the availability of resources to determine whether the system is in a safe or unsafe state.
